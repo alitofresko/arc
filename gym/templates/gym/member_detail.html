@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% load static %} 
+{% block content %}
+  <h1>{{ member.name }} {{ member.surname }}</h1>
+
+  <p><strong>Mail:</strong> {{ member.email }}</p>
+  <div class="center-cropped" 
+     style="background-image: url('{% get_media_prefix %}{{ member.image }}');">
+  </div>
+  <!--  <div class="image-cropper">
+        <img class="centered" src="{% get_media_prefix %}{{ member.image }}" alt="{{ mamber.name }}">
+    </div>
+    -->
+
+{% endblock %}

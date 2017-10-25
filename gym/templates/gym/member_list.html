@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Member List</h1>
+
+    {% if member_list %}
+    <ul>
+      {% for member in member_list %}
+      <li>
+        <a href="{{ member.get_absolute_url }}">{{ member.name }}</a> ({{member.surname}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no member_list.</p>
+    {% endif %}       
+{% endblock %}
